@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irritation - Netflix Final</title>
+
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:#fff;
+    font-family: Arial, sans-serif;
+    overflow:hidden;
+}
+
+.bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background: radial-gradient(circle at center, #111, #000);
+    z-index:-3;
+}
+
+.rain{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:url("https://i.ibb.co/2n3KQ9B/rain.gif");
+    opacity:0.08;
+    z-index:-2;
+}
+
+.grain{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:url("https://i.ibb.co/4f3g3QZ/noise.gif");
+    opacity:0.05;
+    z-index:-1;
+}
+
+.topbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:15px 20px;
+    font-size:18px;
+    color:#ff4d6d;
+}
+
+.scene{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.box{
+    max-width:900px;
+    font-size:24px;
+    line-height:1.8;
+    padding:30px;
+    background: rgba(0,0,0,0.4);
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.08);
+    opacity:0;
+    transform:scale(0.98);
+    transition:1s ease;
+}
+
+.show{
+    opacity:1;
+    transform:scale(1);
+}
+
+.title{
+    font-size:55px;
+    color:#ff4d6d;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="rain"></div>
+<div class="grain"></div>
+
+<div class="topbar">IRRITATION • CINEMATIC STORY</div>
+
+<div class="scene"><div class="box title" id="s0">IRRITATION</div></div>
+
+<div class="scene"><div class="box" id="s1">
+उसमें उसकी यादें हैं...पछतावा है...or adhurapan है...किसी ऐसे इंसान की कमी है...जो कभी मेरी ज़िंदगी का बड़ा हिस्सा था. 😒
+</div></div>
+
+<div class="scene"><div class="box" id="s2">
+Dil की बात किसी को बतानी थी... सुनने वाला कोई nahi hai... रात में.. Insta khola...किसी के इतजार में शायद मेरे कहने पे vo ऑनलाइन aa जाओ... फिर yaad आया की.. वो to nahi आने वाली.... मोबाइल side kiya और सोने की कोशिश की..🥺
+</div></div>
+
+<div class="scene"><div class="box" id="s3">
+तुम्हारे sath.. 🥺दारू पीना tha... Apne style me..सपना ही रह गया...
+</div></div>
+
+<div class="scene"><div class="box" id="s4">
+Proper एक स्पेशल day tha...Sunday... हमारा दिन था...
+</div></div>
+
+<div class="scene"><div class="box" id="s5">
+फ़र्क बस इतना है... मैंने gujre हुए लम्हों को jindgi बना लिया...
+</div></div>
+
+<div class="scene"><div class="box" id="s6">
+जो मेरे लिए Golden Days हैं...उसके लिए आज Irritation.🥺
+</div></div>
+
+<script>
+const boxes = document.querySelectorAll(".box");
+let i=0;
+
+function show(){
+    boxes.forEach(b=>b.classList.remove("show"));
+    boxes[i].classList.add("show");
+    i++;
+    if(i>=boxes.length) i=0;
+}
+
+show();
+setInterval(show, 4000);
+</script>
+
+</body>
+</html>
